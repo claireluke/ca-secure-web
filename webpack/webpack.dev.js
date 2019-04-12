@@ -28,8 +28,8 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
                 '/h2-console',
                 '/auth'
             ],
-            target: `http${options.tls ? 's' : ''}://127.0.0.1:8080`,
-            secure: false,
+            target: `https${options.tls ? 's' : ''}://127.0.0.1:8080`,
+            secure: true,
             changeOrigin: options.tls,
             headers: { host: 'localhost:9000' }
         }],
@@ -121,7 +121,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
             host: 'localhost',
             port: 9000,
             proxy: {
-                target: 'http://localhost:9060'
+                target: 'https://localhost:9060'
             },
             socket: {
                 clients: {

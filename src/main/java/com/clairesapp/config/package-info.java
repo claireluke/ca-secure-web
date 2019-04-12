@@ -1,4 +1,4 @@
 /**
  * Spring Framework configuration files.
  */
-package com.clairesapp.config;
+//package com.clairesapp.config;
