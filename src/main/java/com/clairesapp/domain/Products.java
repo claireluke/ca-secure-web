@@ -9,9 +9,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-/**
- * A Products.
- */
 @Entity
 @Table(name = "products")
 public class Products implements Serializable {
@@ -39,8 +36,7 @@ public class Products implements Serializable {
     @Column(name = "product_img")
     private String productImg;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
+   public Long getId() {
         return id;
     }
 
@@ -99,8 +95,7 @@ public class Products implements Serializable {
     public void setProductImg(String productImg) {
         this.productImg = productImg;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
-
+   
     @Override
     public boolean equals(Object o) {
         if (this == o) {

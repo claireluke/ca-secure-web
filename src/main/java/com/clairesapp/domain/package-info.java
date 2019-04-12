@@ -1,4 +1,4 @@
 /**
  * JPA domain objects.
  */
-package com.clairesapp.domain;
+//package com.clairesapp.domain;
