@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-products-heading">Create or edit a Products</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!products.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="products.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productName">Product Name</label>
+                    <input type="text" class="form-control" name="productName" id="field_productName"
+                        [(ngModel)]="products.productName" required minlength="3" maxlength="50" pattern="^[a-zA-Z0-9]*$"/>
+                    <div [hidden]="!(editForm.controls.productName?.dirty && editForm.controls.productName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.productName?.errors?.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.productName?.errors?.minlength">
+                        This field is required to be at least 3 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.productName?.errors?.maxlength">
+                        This field cannot be longer than 50 characters.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.productName?.errors?.pattern">
+                            This field should follow pattern for "Product Name".
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productDesc">Product Desc</label>
+                    <input type="text" class="form-control" name="productDesc" id="field_productDesc"
+                        [(ngModel)]="products.productDesc" pattern="^[a-zA-Z0-9_ ]*$"/>
+                    <div [hidden]="!(editForm.controls.productDesc?.dirty && editForm.controls.productDesc?.invalid)">
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.productDesc?.errors?.pattern">
+                            This field should follow pattern for "Product Desc".
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productPrice">Product Price</label>
+                    <input type="number" class="form-control" name="productPrice" id="field_productPrice"
+                        [(ngModel)]="products.productPrice" required/>
+                    <div [hidden]="!(editForm.controls.productPrice?.dirty && editForm.controls.productPrice?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.productPrice?.errors?.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.productPrice?.errors?.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_productImg">Product Img</label>
+                    <input type="text" class="form-control" name="productImg" id="field_productImg"
+                        [(ngModel)]="products.productImg" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
