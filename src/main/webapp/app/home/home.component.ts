@@ -3,7 +3,6 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginModalService, AccountService, Account } from '../core';
-//import { LoginModalService, AccountService, Account } from 'app/core';
 import {MatButtonModule} from '@angular/material';
 import { Product } from '../entities/products/product';
 import { ProductsService } from '../entities/products/products.service';
@@ -21,21 +20,21 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
     ]
   })
   
-  @Component({
+@Component({
     selector: 'jhi-home',
    // template: '  <img src="assets/Grooming.jpg">',
     templateUrl: './home.component.html',
     styleUrls: ['home.scss']
 })
 
-
 export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
     products: Product[] = [];
     title = 'CM Grooming Services';
-
-    faPaw=faPaw;
+    panelOpenState = false;
+    faPaw = faPaw;
+    
     constructor(
         private accountService: AccountService,
         private loginModalService: LoginModalService,
@@ -53,10 +52,10 @@ export class HomeComponent implements OnInit {
     
     getProducts(): void {
         this.productService.getProducts()
-         .subscribe(products => this.products = products)
+         .subscribe(products => this.products = products);
     }
     
-      registerAuthenticationSuccess() {
+    registerAuthenticationSuccess() {
         this.eventManager.subscribe('authenticationSuccess', message => {
             this.accountService.identity().then(account => {
                 this.account = account;
