@@ -7,7 +7,6 @@ import {
     PasswordStrengthBarComponent,
     RegisterComponent,
     ActivateComponent,
-    PasswordComponent,
     PasswordResetInitComponent,
     PasswordResetFinishComponent,
     accountState
@@ -18,7 +17,6 @@ import {
     declarations: [
         ActivateComponent,
         RegisterComponent,
-        PasswordComponent,
         PasswordStrengthBarComponent,
         PasswordResetInitComponent,
         PasswordResetFinishComponent
