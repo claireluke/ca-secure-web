@@ -11,9 +11,6 @@ import {
     UserMgmtUpdateComponent,
     UserMgmtDeleteDialogComponent,
     LogsComponent,
-    JhiMetricsMonitoringComponent,
-    JhiHealthModalComponent,
-    JhiHealthCheckComponent,
     JhiConfigurationComponent
 } from './';
 
@@ -30,12 +27,9 @@ import {
         UserMgmtUpdateComponent,
         UserMgmtDeleteDialogComponent,
         LogsComponent,
-        JhiConfigurationComponent,
-        JhiHealthCheckComponent,
-        JhiHealthModalComponent,
-        JhiMetricsMonitoringComponent
+        JhiConfigurationComponent
     ],
-    entryComponents: [UserMgmtDeleteDialogComponent, JhiHealthModalComponent],
+    entryComponents: [UserMgmtDeleteDialogComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ClairesappAdminModule {}

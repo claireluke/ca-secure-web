@@ -85,11 +85,7 @@ jhipster:
         remember-me:
             # security key (this key should be unique for your application, and kept secret)
             key: 2c03176827b56a37344b0175a42c2ebaf832a731d017330322080529652f8f82b7cfd7626316f024725573ce9a60266aa67e
-    metrics:
-        logs: # Reports metrics in the logs
-            enabled: true
-            report-frequency: 60 # in seconds
-
+    
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
