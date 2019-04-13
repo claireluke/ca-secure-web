@@ -28,7 +28,6 @@ export class ProfileService {
                                 pi.ribbonEnv = ribbonProfiles[0];
                             }
                             pi.inProduction = pi.activeProfiles.includes('prod');
-                            pi.swaggerEnabled = pi.activeProfiles.includes('swagger');
                         }
                         return pi;
                     })
