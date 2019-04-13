@@ -4,15 +4,20 @@ import { JhiEventManager } from 'ng-jhipster';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginModalService, AccountService, Account } from '../core';
 //import { LoginModalService, AccountService, Account } from 'app/core';
-import {MatCardModule, MatButtonModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material';
 import { Product } from '../entities/products/product';
 import { ProductsService } from '../entities/products/products.service';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
     imports: [
       BrowserModule,
       MatCardModule,
-      MatButtonModule
+      MatButtonModule,
+      MatIconModule,
+      MatCardModule
     ]
   })
   
@@ -28,8 +33,9 @@ export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
     products: Product[] = [];
-    title = 'CM Grooming Services Test';
+    title = 'CM Grooming Services';
 
+    faPaw=faPaw;
     constructor(
         private accountService: AccountService,
         private loginModalService: LoginModalService,

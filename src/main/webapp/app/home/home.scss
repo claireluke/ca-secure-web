@@ -3,6 +3,10 @@ Main page styles
 ========================================================================== */
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+@import '~@angular/material/theming';
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (-moz-min-device-pixel-ratio: 2),
     only screen and (-o-min-device-pixel-ratio: 2/1),
@@ -10,3 +14,10 @@ Main page styles
     only screen and (min-resolution: 2dppx) {
     
 }
+
+.card-picture {
+    width: 23%;
+  }
+  .card-picture2 {
+    width: 75%;
+  }

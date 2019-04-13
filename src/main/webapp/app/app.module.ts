@@ -20,7 +20,8 @@ import { ClairesappEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
-
+import { MatIconModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
     imports: [
         BrowserModule,
@@ -37,7 +38,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         ClairesappAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
         ClairesappEntityModule,
-        ClairesappAppRoutingModule
+        ClairesappAppRoutingModule,
+        FlexLayoutModule
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
