@@ -14,8 +14,7 @@ import {
     JhiMetricsMonitoringComponent,
     JhiHealthModalComponent,
     JhiHealthCheckComponent,
-    JhiConfigurationComponent,
-    JhiDocsComponent
+    JhiConfigurationComponent
 } from './';
 
 @NgModule({
@@ -34,7 +33,6 @@ import {
         JhiConfigurationComponent,
         JhiHealthCheckComponent,
         JhiHealthModalComponent,
-        JhiDocsComponent,
         JhiMetricsMonitoringComponent
     ],
     entryComponents: [UserMgmtDeleteDialogComponent, JhiHealthModalComponent],

@@ -11,7 +11,6 @@ import {
     PasswordComponent,
     PasswordResetInitComponent,
     PasswordResetFinishComponent,
-    SettingsComponent,
     accountState
 } from './';
 
@@ -24,8 +23,7 @@ import {
         PasswordStrengthBarComponent,
         PasswordResetInitComponent,
         PasswordResetFinishComponent,
-        SessionsComponent,
-        SettingsComponent
+        SessionsComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

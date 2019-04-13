@@ -23,7 +23,6 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
                 /* jhipster-needle-add-entity-to-webpack - JHipster will add entity api paths here */
                 '/api',
                 '/management',
-                '/v2/api-docs',
                 '/h2-console',
                 '/auth'
             ],
@@ -140,7 +139,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
         ]),
         new WebpackNotifierPlugin({
             title: 'JHipster',
-            contentImage: path.join(__dirname, 'logo-jhipster.png')
+            contentImage: path.join(__dirname, 'dog.png')
         })
     ].filter(Boolean),
     mode: 'development'
