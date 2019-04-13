@@ -5,8 +5,7 @@ import {
     passwordRoute,
     passwordResetFinishRoute,
     passwordResetInitRoute,
-    registerRoute,
-    sessionsRoute
+    registerRoute
 } from './';
 
 const ACCOUNT_ROUTES = [
@@ -14,8 +13,7 @@ const ACCOUNT_ROUTES = [
     passwordRoute,
     passwordResetFinishRoute,
     passwordResetInitRoute,
-    registerRoute,
-    sessionsRoute
+    registerRoute
 ];
 
 export const accountState: Routes = [

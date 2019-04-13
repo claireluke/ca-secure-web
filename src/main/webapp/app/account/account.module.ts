@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { ClairesappSharedModule } from 'app/shared';
 
 import {
-    SessionsComponent,
     PasswordStrengthBarComponent,
     RegisterComponent,
     ActivateComponent,
@@ -22,8 +21,7 @@ import {
         PasswordComponent,
         PasswordStrengthBarComponent,
         PasswordResetInitComponent,
-        PasswordResetFinishComponent,
-        SessionsComponent
+        PasswordResetFinishComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
