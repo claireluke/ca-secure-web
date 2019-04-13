@@ -9,8 +9,7 @@ import {
     UserMgmtComponent,
     UserMgmtDetailComponent,
     UserMgmtUpdateComponent,
-    UserMgmtDeleteDialogComponent,
-    JhiConfigurationComponent
+    UserMgmtDeleteDialogComponent
 } from './';
 
 @NgModule({
@@ -24,8 +23,7 @@ import {
         UserMgmtComponent,
         UserMgmtDetailComponent,
         UserMgmtUpdateComponent,
-        UserMgmtDeleteDialogComponent,
-        JhiConfigurationComponent
+        UserMgmtDeleteDialogComponent
     ],
     entryComponents: [UserMgmtDeleteDialogComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
