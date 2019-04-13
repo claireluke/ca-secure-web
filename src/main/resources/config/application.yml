@@ -19,7 +19,7 @@ management:
         web:
             base-path: /management
             exposure:
-                include: ["configprops", "env", "info", "threaddump", "logfile", "prometheus" ]
+                include: ["configprops", "env", "info", "threaddump", "prometheus" ]
     info:
         git:
             mode: full

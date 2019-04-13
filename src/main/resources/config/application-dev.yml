@@ -13,12 +13,6 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-logging:
-    level:
-        ROOT: DEBUG
-        io.github.jhipster: DEBUG
-        com.clairesapp: DEBUG
-
 spring:
     profiles:
         active: dev
@@ -100,13 +94,7 @@ jhipster:
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: clairesapp@localhost
         base-url: https://127.0.0.1:8080
-    logging:
-        logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
-            enabled: false
-            host: localhost
-            port: 5000
-            queue-size: 512
-
+    
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
