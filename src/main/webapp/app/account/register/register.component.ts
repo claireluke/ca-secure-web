@@ -5,9 +5,12 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared';
 import { LoginModalService } from 'app/core';
 import { Register } from './register.service';
+import { PasswordStrengthBarComponent } from '../password/password-strength-bar.component';
+import { ConstantPool } from '@angular/compiler';
 
 @Component({
     selector: 'jhi-register',
+    providers: [PasswordStrengthBarComponent],
     templateUrl: './register.component.html'
 })
 export class RegisterComponent implements OnInit, AfterViewInit {
@@ -19,12 +22,13 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     registerAccount: any;
     success: boolean;
     modalRef: NgbModalRef;
-
+    strength: string;
     constructor(
         private loginModalService: LoginModalService,
         private registerService: Register,
         private elementRef: ElementRef,
-        private renderer: Renderer
+        private renderer: Renderer,
+        private passwordStrength: PasswordStrengthBarComponent
     ) {}
 
     ngOnInit() {
@@ -37,10 +41,15 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     }
 
     register() {
+        const c = this.passwordStrength.getColor(this.passwordStrength.measureStrength(this.registerAccount.password));
         if (this.registerAccount.password !== this.confirmPassword) {
             this.doNotMatch = 'ERROR';
+        }
+        if (this.passwordStrength.getColor(this.passwordStrength.measureStrength(this.registerAccount.password)).idx != 5) {
+            this.strength = 'POOR';
         } else {
             this.doNotMatch = null;
+            this.strength = null;
             this.error = null;
             this.errorUserExists = null;
             this.errorEmailExists = null;

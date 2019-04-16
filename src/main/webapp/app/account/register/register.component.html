@@ -22,6 +22,9 @@
             <div class="alert alert-danger" *ngIf="doNotMatch">
                 The password and its confirmation do not match!
             </div>
+            <div class="alert alert-danger" *ngIf="strength">
+                The password is not strong enough. Please enter a password with upper and lower case characters, number and a special character.         
+            </div>
         </div>
     </div>
     <div class="row justify-content-center">

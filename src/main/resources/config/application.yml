@@ -58,8 +58,10 @@ server:
     ssl:
         key-store: keystore.p12
         key-store-password: secureweb2019
-        keyStoreType: PKCS12
-        keyAlias: tomcat
+        key-store-type: PKCS12
+        key-alias: tomcat
+    port: 8993
+        
 # Properties to be exposed on the /info management endpoint
 info:
     # Comma separated list of profiles that will trigger the ribbon to show
