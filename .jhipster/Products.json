@@ -23,7 +23,7 @@
             "fieldValidateRules": [
                 "pattern"
             ],
-            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$"
+            "fieldValidateRulesPattern": "^^[a-zA-Z0-9/ .,]*$"
         },
         {
             "fieldName": "productPrice",
